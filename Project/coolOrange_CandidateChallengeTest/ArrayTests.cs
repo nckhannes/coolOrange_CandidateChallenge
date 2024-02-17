@@ -42,10 +42,10 @@ namespace coolOrange_CandidateChallengeTest
 		{
 			var array = new int[] { 1, 2, 5, 3, 7, 9, 10 };
 			Array.ShiftLeftByOne(array, 0, 5);
-			Assert.AreEqual(new int[] { 2, 5, 3, 7, 1, 9, 10 }, array);
-		}
+            Assert.AreEqual(new int[] { 2, 5, 3, 7, 1, 9, 10 }, array);
+        }
 
-		[Test]
+        [Test]
 		public void CreateRandomArray_returns_array_with_passed_size_and_random_values_between_min_and_max()
 		{
 			var minValue = 5;
@@ -57,20 +57,20 @@ namespace coolOrange_CandidateChallengeTest
 			Assert.IsTrue(randomArray.All(value => value <= maxValue));
 		}
 
-		[Test]
-		public void CreateRandomMatrix_returns_a_two_dimensional_array_with_rows_and_columns_of_random_elements_with_values_between_min_and_max()
-		{
-			var rows = 5; var columns = 6;
-			var minValue = 0; var maxValue = 20;
-			var randomMatrix = Array.CreateRandomMatrix(rows, columns, minValue, maxValue);
+        [Test]
+        public void CreateRandomMatrix_returns_a_two_dimensional_array_with_rows_and_columns_of_random_elements_with_values_between_min_and_max()
+        {
+            var rows = 5; var columns = 6;
+            var minValue = 0; var maxValue = 20;
+            var randomMatrix = Array.CreateRandomMatrix(rows, columns, minValue, maxValue);
 
-			Assert.AreEqual(5, randomMatrix.GetLength(0));
-			Assert.AreEqual(6, randomMatrix.GetLength(1));
-			Assert.IsTrue(maxValue >= randomMatrix.Cast<int>().Max());
-			Assert.IsTrue(minValue <= randomMatrix.Cast<int>().Min());
-		}
+            Assert.AreEqual(5, randomMatrix.GetLength(0));
+            Assert.AreEqual(6, randomMatrix.GetLength(1));
+            Assert.IsTrue(maxValue >= randomMatrix.Cast<int>().Max());
+            Assert.IsTrue(minValue <= randomMatrix.Cast<int>().Min());
+        }
 
-		[Test]
+        [Test]
 		public void CopyArray_returns_a_two_dimensional_array_with_the_original_and_the_copy_of_the_array()
 		{
 			var array = new[] { 1, 2, 10, 0, 2, 7 };
@@ -91,5 +91,6 @@ namespace coolOrange_CandidateChallengeTest
 			Assert.AreEqual(5, Array.FindInSortedArray(array, 5));
 			Assert.AreEqual(9, Array.FindInSortedArray(array, 10));
 		}
-	}
+		
+	} 
 }

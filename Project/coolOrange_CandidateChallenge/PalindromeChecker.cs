@@ -6,7 +6,22 @@ namespace coolOrange_CandidateChallenge
     {
         public static bool IsPalindrome(string s)
         {
-            throw new NotImplementedException();
+            s = s.ToLower();
+            return IsPalindromeChecker(s, 0,s.Length-1);
+
+        }
+
+        public static bool IsPalindromeChecker(string s, int anfang, int ende)
+        {
+            if (s == "" || anfang == ende || s.Length == 2 && s[anfang] == s[ende]) 
+            {
+                return true;
+            }
+            if (s[anfang] != s[ende])
+            {
+                return false;
+            }
+            return IsPalindromeChecker(s, anfang+1, ende - 1);
         }
     }
 }

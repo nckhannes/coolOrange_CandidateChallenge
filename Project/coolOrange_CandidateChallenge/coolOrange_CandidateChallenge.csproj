@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array.cs" />
+    <Compile Include="TaskDriver.cs" />
+    <Compile Include="IComplexity.cs" />
+    <Compile Include="IPriority.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="PalindromeChecker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,6 +6,7 @@ namespace coolOrange_CandidateChallengeTest
 	[TestFixture]
 	public class PalindromeCheckerTest
 	{
+		
 		[Test]
 		public void IsPalindrome_passing_empty_returns_true()
 		{
@@ -37,5 +38,6 @@ namespace coolOrange_CandidateChallengeTest
 		{
 			Assert.IsFalse(PalindromeChecker.IsPalindrome(phrase));
 		}
+		
 	}
 }
